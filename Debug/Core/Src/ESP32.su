@@ -1,0 +1,7 @@
+../Core/Src/ESP32.c:57:6:HAL_UARTEx_RxEventCallback	24	static
+../Core/Src/ESP32.c:89:13:uartSend	8	static
+../Core/Src/ESP32.c:97:13:debugLog	16	static
+../Core/Src/ESP32.c:104:6:ESP_Init	272	static
+../Core/Src/ESP32.c:185:6:ESP_COM	2176	static
+../Core/Src/ESP32.c:213:5:CheckforOK	8	static
+../Core/Src/ESP32.c:227:5:Look_for	32	static
