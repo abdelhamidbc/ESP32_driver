@@ -157,7 +157,7 @@ void ESP_Init (PARAM param)
 		  sprintf (data, "AT+CWSAP=\"%s\",\"%s\"\r\n", param.SSID, param.PASSWD);
 		  uartSend(param.UART, data);
 		  memset(Res,'0',sizeof(Res));
-		  sprintf (Res, "Connected to,\"%s\"\n\n", param.SSID);
+		  sprintf (Res, "Wifi Hotspot created within the SSID \"%s\" and the PASSWD \"%s\"\r\n", param.SSID);
 		  debugLog(Res);
 		  uartSend(param.UART, "AT+CIPMUX=1\r\n");
 		  uartSend(param.UART, "AT+CIPSERVER=1\r\n");
@@ -198,9 +198,7 @@ void ESP_COM(PARAM param)
 	 sprintf (datatosend, "AT+CIPSEND=%d\r\n", sizeof(datatosend));
 	 uartSend(param.UART, datatosend);
 	 HAL_Delay(100);
-
 	 uartSend(param.UART, GET_req);
-
 	 sprintf (data, "AT+CIPCLOSE\r\n");
 	 uartSend(param.UART, data);
 
