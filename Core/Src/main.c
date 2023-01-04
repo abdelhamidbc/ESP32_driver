@@ -87,12 +87,14 @@ int main(void)
 	PARAM ESP_param;
     /* Please select the mode
     * * 1 : Being the client mode
-    * * * 2 : Being the Access Point Mode
-	* * 3 : Being the Client / Access Point Mode */
+    * * 2 : Being the Access Point Mode
+    * * 3 : Being the Client / Access Point Mode */
 
 	memcpy(ESP_param.Mode, "1", 1);
 	memcpy(ESP_param.SSID, SSID, sizeof(SSID));
 	memcpy(ESP_param.PASSWD, PASSWD, sizeof(PASSWD));
+	ESP_param.UART = huart3;
+
 
 
   /* USER CODE END 1 */
